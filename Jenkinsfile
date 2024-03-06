@@ -4,15 +4,15 @@ pipeline{
     stage('Build'){
           steps {
             sh 'make -C main'
-            echo "Build Stage Successfull"
+            echo "Build Stage Successful"
           }
     }
 
     stage('Test'){
           steps {
-            echo "Output: ${output}"
+            echo "Output:"
             sh './hello_exec'
-            echo "Test Stage Successfull"
+            echo "Test Stage Successful"
           }
     }
 
