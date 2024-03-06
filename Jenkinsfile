@@ -1,5 +1,5 @@
 pipeline{
-  agents any
+  agent any
   stages {
     stage('Build'){
           steps {
@@ -10,8 +10,8 @@ pipeline{
 
     stage('Test'){
           steps {
-            def output = sh(script: './hello_exec', returnStdout: true).trim()
             echo "Output: ${output}"
+            sh './hello_exec'
             echo "Test Stage Successfull"
           }
     }
